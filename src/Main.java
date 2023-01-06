@@ -212,7 +212,12 @@ Stream.generate(Math::random)
                 .collect(Collectors.toList());
         //Necessary for Collectors to convert primitives to List<T>
 
+//When dealing with streams of objects, you can convert from a stream to a collection
+//using one of the static methods in the Collectors class. For example, given a stream
+//of strings, you can create a List<String> using the code in Example 3-8.
 
+        List<String> strings = Stream.of("this", "is", "a", "list", "of", "strings")
+                .collect(Collectors.toList());
 
     }
 
